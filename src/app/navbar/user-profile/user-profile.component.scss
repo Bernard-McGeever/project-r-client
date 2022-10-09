@@ -1,0 +1,30 @@
+div {
+  float: right;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 10px;
+  background-color: #140005;
+
+  h1 {
+    font-size: 20px;
+    color: #efeaea;
+    border-width: 0 0 0 4px;
+    border-bottom: 1px solid #EE4B2B;
+  }
+
+  ul {
+    padding-left: 5px;
+
+    li {
+      list-style: none;
+      font-size: 18px;
+
+      color: #efeaea;
+    }
+
+    li:hover {
+      color: rgba(239, 234, 234, 0.90);
+      cursor: pointer;
+    }
+  }
+}
