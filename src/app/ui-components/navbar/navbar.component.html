@@ -1,0 +1,10 @@
+<nav>
+  <app-logo-home></app-logo-home>
+  <div class="right-align">
+    <app-search-bar></app-search-bar>
+    <mat-icon class="user-profile-icon" (click)="onUserProfileClicked($event)">account_circle</mat-icon>
+  </div>
+</nav>
+
+<app-user-profile *ngIf="isUserProfileShown" (userProfileShownEvent)="hideUserProfile($event)"></app-user-profile>
+

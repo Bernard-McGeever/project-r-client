@@ -1,0 +1,28 @@
+h1 {
+  float: left;
+
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: 0.2em;
+  text-align: center;
+  font-size: 24px;
+
+  padding-left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  span {
+    color: crimson;
+  }
+}
+
+h1:hover {
+  cursor: pointer;
+
+  color: rgba(255, 255, 255, 0.80);
+
+  span {
+    color: rgba(220, 20, 60, 0.80);
+  }
+}
