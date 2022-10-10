@@ -1,4 +1,5 @@
-@use "src/assets/styles/abstracts" as *;
+@use "src/assets/styles/abstracts" as a;
+@use "src/assets/styles/components" as c;
 
 div {
   float: right;
@@ -9,30 +10,26 @@ div {
 
   h1 {
     padding: 0 50px 0 10px;
-    font-family: $font-primary;
-    letter-spacing: $medium-letter-spacing;
-    font-size: $font-size-medium;
-    color: $primary-text-dark;
+    font-family: a.$font-primary;
+    letter-spacing: a.$medium-letter-spacing;
+    font-size: a.$font-size-medium;
+    color: a.$primary-text-dark;
     border-width: 0 0 0 2px;
-    border-bottom: 2px solid $secondary-text-dark;
+    border-bottom: 2px solid a.$secondary-text-dark;
   }
 
   ul {
     padding: 0 0 0 0;
 
     li {
+      @include c.onHover(a.$primary-text-dark,
+        a.$primary-text-dark-hover);
+
       padding: 0 0 0 10px;
-      font-family: $font-primary;
-      letter-spacing: $medium-letter-spacing;
+      font-family: a.$font-primary;
+      letter-spacing: a.$medium-letter-spacing;
       list-style: none;
-      font-size: $font-size-small;
-
-      color: $primary-text-dark;
-    }
-
-    li:hover {
-      color: $primary-text-dark-hover;
-      cursor: pointer;
+      font-size: a.$font-size-small;
     }
   }
 }

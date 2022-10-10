@@ -1,0 +1,13 @@
+@use "src/assets/styles/abstracts" as *;
+
+// Buttons
+@mixin onHover($primary-color, $primary-color-hover, $secondary-color: $nav-color-dark, $secondary-color-hover: $nav-color-dark){
+  color: $primary-color;
+  background-color: $secondary-color;
+
+  &:hover {
+    cursor: pointer;
+    color: $primary-color-hover;
+    background-color: $secondary-color-hover;
+  }
+}

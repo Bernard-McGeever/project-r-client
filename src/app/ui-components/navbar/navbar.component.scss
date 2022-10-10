@@ -1,7 +1,8 @@
-@use "src/assets/styles/abstracts" as *;
+@use "src/assets/styles/abstracts" as a;
+@use "src/assets/styles/components" as c;
 
 nav {
-  background-color: $nav-color-dark;
+  background-color: a.$nav-color-dark;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -14,17 +15,16 @@ nav {
     padding: 7px 10px 0 0;
 
     .user-profile-icon {
+      @include c.onHover(a.$secondary-btn-background-dark,
+        a.$secondary-btn-background-dark-hover,
+        a.$secondary-btn-foreground-dark,
+        a.$secondary-btn-foreground-dark-hover);
+
       display: inline-block;
-      color: $secondary-btn-background-dark;
       margin: 5px;
 
       transform: scale(1.4);
       vertical-align: middle;
-    }
-
-    .user-profile-icon:hover {
-      cursor: pointer;
-      color: $secondary-btn-background-dark-hover;
     }
   }
 }

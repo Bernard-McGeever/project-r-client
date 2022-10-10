@@ -1,30 +1,31 @@
-@use "src/assets/styles/abstracts" as *;
+@use "src/assets/styles/abstracts" as a;
+@use "src/assets/styles/components" as c;
 
 h1 {
+  @include c.onHover(a.$primary-text-dark, a.$primary-text-dark-hover);
+
   float: left;
 
-  color: $primary-text-dark;
-  font-family: $font-primary;
-  letter-spacing: $wide-letter-spacing;
+  color: a.$primary-text-dark;
+  font-family: a.$font-primary;
+  letter-spacing: a.$wide-letter-spacing;
   text-align: center;
-  font-size: $font-size-large;
+  font-size: a.$font-size-large;
 
   padding-left: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-
   span {
-    color: $secondary-text-dark;
+    color: a.$secondary-text-dark;
   }
-}
 
-h1:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+    color: a.$primary-text-dark-hover;
 
-  color: $primary-text-dark-hover;
-
-  span {
-    color: $secondary-text-dark-hover;
+    span {
+      color: a.$secondary-text-dark-hover;
+    }
   }
 }
