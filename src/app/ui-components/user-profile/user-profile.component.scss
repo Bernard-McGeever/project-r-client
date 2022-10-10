@@ -1,3 +1,5 @@
+@use "src/assets/styles/abstracts" as *;
+
 div {
   float: right;
   padding-top: 10px;
@@ -7,12 +9,12 @@ div {
 
   h1 {
     padding: 0 50px 0 10px;
-    font-family: 'Inconsolata', monospace;
-    letter-spacing: 0.2em;
-    font-size: 18px;
-    color: white;
+    font-family: $font-primary;
+    letter-spacing: $medium-letter-spacing;
+    font-size: $font-size-medium;
+    color: $primary-text-dark;
     border-width: 0 0 0 2px;
-    border-bottom: 2px solid crimson;
+    border-bottom: 2px solid $secondary-text-dark;
   }
 
   ul {
@@ -20,16 +22,16 @@ div {
 
     li {
       padding: 0 0 0 10px;
-      font-family: 'Inconsolata', monospace;
-      letter-spacing: 0.2em;
+      font-family: $font-primary;
+      letter-spacing: $medium-letter-spacing;
       list-style: none;
-      font-size: 15px;
+      font-size: $font-size-small;
 
-      color: white;
+      color: $primary-text-dark;
     }
 
     li:hover {
-      color: rgba(255, 255, 255, 0.80);
+      color: $primary-text-dark-hover;
       cursor: pointer;
     }
   }

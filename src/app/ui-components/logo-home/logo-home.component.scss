@@ -1,11 +1,13 @@
+@use "src/assets/styles/abstracts" as *;
+
 h1 {
   float: left;
 
-  color: white;
-  font-family: 'Inconsolata', monospace;
-  letter-spacing: 0.2em;
+  color: $primary-text-dark;
+  font-family: $font-primary;
+  letter-spacing: $wide-letter-spacing;
   text-align: center;
-  font-size: 24px;
+  font-size: $font-size-large;
 
   padding-left: 10px;
   position: absolute;
@@ -13,16 +15,16 @@ h1 {
   transform: translateY(-50%);
 
   span {
-    color: crimson;
+    color: $secondary-text-dark;
   }
 }
 
 h1:hover {
   cursor: pointer;
 
-  color: rgba(255, 255, 255, 0.80);
+  color: $primary-text-dark-hover;
 
   span {
-    color: rgba(220, 20, 60, 0.80);
+    color: $secondary-text-dark-hover;
   }
 }

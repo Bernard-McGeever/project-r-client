@@ -1,3 +1,5 @@
+@use "src/assets/styles/abstracts" as *;
+
 .container {
   position: absolute;
   margin: auto;
@@ -20,7 +22,7 @@
     width: 100px;
     height: 100px;
 
-    background: crimson;
+    background: $primary-btn-background-dark;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     border: none;
@@ -29,7 +31,7 @@
 
     &:hover {
       cursor: pointer;
-      background-color: #ad1030;
+      background-color: $primary-btn-background-dark-hover;
     }
 
     &:before {
@@ -43,7 +45,7 @@
       // draw handle of magnifying glass
       width: 14px;
       height: 2px;
-      background: white;
+      background: $primary-btn-foreground-dark;
       transform: rotate(45deg);
     }
 
@@ -59,7 +61,7 @@
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 2px solid $primary-btn-foreground-dark;
     }
 
   }
@@ -77,16 +79,16 @@
     height: 100px;
     border-radius: 30px;
 
-    font-family: 'Inconsolata', monospace;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
+    font-family: $font-primary;
+    font-weight: normal;
+    letter-spacing: $narrow-letter-spacing;
 
     z-index: 1;
 
     outline: none;
     border: none;
-    background-color: crimson;
-    color: white;
+    background-color: $primary-btn-background-dark;
+    color: $primary-text-dark;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
 
     cursor: pointer;
@@ -94,7 +96,7 @@
     transition: all 1s;
 
     &:hover {
-      background-color: #ad1030;
+      background-color: $primary-btn-background-dark-hover;
     }
 
     &:focus {
@@ -103,7 +105,7 @@
       height: 50px;
       cursor: text;
 
-      background-color: #ad1030;
+      background-color: $primary-btn-background-dark-hover;
     }
 
     &:focus ~ .search {
@@ -113,8 +115,7 @@
 
     &::placeholder {
       font-weight: bolder;
-      color: white;
+      color: $primary-text-dark;
     }
   }
-
 }

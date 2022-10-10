@@ -1,5 +1,7 @@
+@use "src/assets/styles/abstracts" as *;
+
 nav {
-  background-color: #1C1C1CFF;
+  background-color: $nav-color-dark;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -9,13 +11,11 @@ nav {
     float: right;
     display: block;
     margin: auto;
-    padding: 7px 10px 0 0px;
-
-    border-color: crimson;
+    padding: 7px 10px 0 0;
 
     .user-profile-icon {
       display: inline-block;
-      color: white;
+      color: $secondary-btn-background-dark;
       margin: 5px;
 
       transform: scale(1.4);
@@ -24,7 +24,7 @@ nav {
 
     .user-profile-icon:hover {
       cursor: pointer;
-      color: rgba(239, 234, 234, 0.90);
+      color: $secondary-btn-background-dark-hover;
     }
   }
 }

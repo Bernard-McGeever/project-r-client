@@ -1,6 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {ApplicationSettingsService} from "../../services/application/application-settings.service";
-import {ThemeType} from "../../services/application/models/theme-type.enum";
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ApplicationSettingsService } from "../../services/application/application-settings.service";
+import { ThemeType } from "../../services/application/models/theme-type.enum";
 
 @Component({
   selector: 'app-user-profile',
