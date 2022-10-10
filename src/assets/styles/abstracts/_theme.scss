@@ -1,0 +1,24 @@
+@use "src/assets/styles/abstracts/color" as c;
+
+$dark-theme: (
+  // Background
+  "base-color": c.$base-color-dark,
+  "nav-color": c.$nav-color-dark,
+  "primary-btn-background": c.$primary-btn-background-dark,
+  "primary-btn-background-hover": c.$primary-btn-background-dark-hover,
+  "secondary-btn-background": c.$secondary-btn-background-dark,
+  "secondary-btn-background-hover": c.$secondary-btn-background-dark-hover,
+  // Foreground
+  "primary-btn-foreground": c.$primary-btn-foreground-dark,
+  "primary-btn-foreground-hover": c.$primary-btn-foreground-dark-hover,
+  "secondary-btn-foreground": c.$secondary-btn-foreground-dark,
+  "secondary-btn-foreground-hover": c.$secondary-btn-foreground-dark-hover,
+  // Text
+  "primary-text": c.$primary-text-dark,
+  "primary-text-hover": c.$primary-text-dark-hover,
+  "secondary-text": c.$secondary-text-dark,
+  "secondary-text-hover": c.$secondary-text-dark-hover
+);
+
+$light-theme: ();
+

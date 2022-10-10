@@ -1,12 +1,17 @@
 @use "src/assets/styles/abstracts" as a;
 @use "src/assets/styles/components" as c;
 
+@use "sass:map";
+
 h1 {
-  @include c.onHover(a.$primary-text-dark, a.$primary-text-dark-hover);
+  @include c.onHover(
+      map.get(a.$dark-theme, "primary-text-dark"),
+      map.get(a.$dark-theme, "primary-text-hover")
+  );
 
   float: left;
 
-  color: a.$primary-text-dark;
+  color: map.get(a.$dark-theme, "primary-text");
   font-family: a.$font-primary;
   letter-spacing: a.$wide-letter-spacing;
   text-align: center;
@@ -17,15 +22,15 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   span {
-    color: a.$secondary-text-dark;
+    color: map.get(a.$dark-theme, "secondary-text");
   }
 
   &:hover {
     cursor: pointer;
-    color: a.$primary-text-dark-hover;
+    color: map.get(a.$dark-theme, "primary-text-hover");
 
     span {
-      color: a.$secondary-text-dark-hover;
+      color: map.get(a.$dark-theme, "secondary-text-hover");
     }
   }
 }

@@ -1,6 +1,8 @@
 @use "src/assets/styles/abstracts" as a;
 @use "src/assets/styles/components" as c;
 
+@use "sass:map";
+
 div {
   float: right;
   padding-top: 10px;
@@ -13,17 +15,19 @@ div {
     font-family: a.$font-primary;
     letter-spacing: a.$medium-letter-spacing;
     font-size: a.$font-size-medium;
-    color: a.$primary-text-dark;
+    color: map.get(a.$dark-theme, "primary-text");
     border-width: 0 0 0 2px;
-    border-bottom: 2px solid a.$secondary-text-dark;
+    border-bottom: 2px solid map.get(a.$dark-theme, "secondary-text");
   }
 
   ul {
     padding: 0 0 0 0;
 
     li {
-      @include c.onHover(a.$primary-text-dark,
-        a.$primary-text-dark-hover);
+      @include c.onHover(
+          map.get(a.$dark-theme, "primary-text"),
+          map.get(a.$dark-theme, "primary-text-hover")
+      );
 
       padding: 0 0 0 10px;
       font-family: a.$font-primary;

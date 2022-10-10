@@ -1,8 +1,10 @@
 @use "src/assets/styles/abstracts" as a;
 @use "src/assets/styles/components" as c;
 
+@use "sass:map";
+
 nav {
-  background-color: a.$nav-color-dark;
+  background-color: map.get(a.$dark-theme, "nav-color");
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -15,10 +17,12 @@ nav {
     padding: 7px 10px 0 0;
 
     .user-profile-icon {
-      @include c.onHover(a.$secondary-btn-background-dark,
-        a.$secondary-btn-background-dark-hover,
-        a.$secondary-btn-foreground-dark,
-        a.$secondary-btn-foreground-dark-hover);
+      @include c.onHover(
+          map.get(a.$dark-theme, "secondary-btn-background"),
+          map.get(a.$dark-theme, "secondary-btn-background-hover"),
+          map.get(a.$dark-theme, "secondary-btn-foreground"),
+          map.get(a.$dark-theme, "secondary-btn-foreground-hover")
+      );
 
       display: inline-block;
       margin: 5px;

@@ -1,6 +1,8 @@
 @use "src/assets/styles/abstracts" as a;
 @use "src/assets/styles/components" as c;
 
+@use "sass:map";
+
 .container {
   position: absolute;
   margin: auto;
@@ -13,10 +15,12 @@
   height: 100px;
 
   .search {
-    @include c.onHover(a.$primary-btn-foreground-dark,
-      a.$primary-btn-foreground-dark-hover,
-      a.$primary-btn-background-dark,
-      a.$primary-btn-background-dark-hover);
+    @include c.onHover(
+        map.get(a.$dark-theme, "primary-btn-foreground"),
+        map.get(a.$dark-theme, "primary-btn-foreground-hover"),
+        map.get(a.$dark-theme, "primary-btn-background"),
+        map.get(a.$dark-theme, "primary-btn-background-hover")
+    );
 
     position: absolute;
     margin: auto;
@@ -45,7 +49,7 @@
       // draw handle of magnifying glass
       width: 14px;
       height: 2px;
-      background: a.$primary-btn-foreground-dark;
+      background: map.get(a.$dark-theme, "primary-btn-foreground");
       transform: rotate(45deg);
     }
 
@@ -61,7 +65,7 @@
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      border: 2px solid a.$primary-btn-foreground-dark;
+      border: 2px solid map.get(a.$dark-theme, "primary-btn-foreground");
     }
 
   }
@@ -87,8 +91,8 @@
 
     outline: none;
     border: none;
-    background-color: a.$primary-btn-background-dark;
-    color: a.$primary-text-dark;
+    background-color: map.get(a.$dark-theme, "primary-btn-background");
+    color: map.get(a.$dark-theme, "primary-text");
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
 
     cursor: pointer;
@@ -96,7 +100,7 @@
     transition: all 1s;
 
     &:hover {
-      background-color: a.$primary-btn-background-dark-hover;
+      background-color: map.get(a.$dark-theme, "primary-btn-background-hover");
     }
 
     &:focus {
@@ -113,7 +117,7 @@
 
     &::placeholder {
       font-weight: bolder;
-      color: a.$primary-text-dark;
+      color: map.get(a.$dark-theme, "primary-text");
     }
   }
 }

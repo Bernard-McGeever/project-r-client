@@ -1,1 +1,8 @@
+@use "src/assets/styles/abstracts" as a;
+@use "src/assets/styles/components" as c;
 
+@use "sass:map";
+
+:root {
+  background-color: map.get(a.$dark-theme, "base-color");
+}
