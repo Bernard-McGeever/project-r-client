@@ -1,7 +1,7 @@
 <div>
   <h1>PREFERENCES:</h1>
   <ul>
-    <li *ngIf="isDarkModeActive" (click)="darkModeClicked($event)">Light Mode</li>
-    <li *ngIf="!isDarkModeActive" (click)="darkModeClicked($event)">Dark Mode</li>
+    <li *ngIf="currentTheme === themeType.DARK" (click)="onThemeClicked(themeType.LIGHT)">Light Mode</li>
+    <li *ngIf="currentTheme === themeType.LIGHT" (click)="onThemeClicked(themeType.DARK)">Dark Mode</li>
   </ul>
 </div>

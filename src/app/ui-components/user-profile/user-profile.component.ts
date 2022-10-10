@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ApplicationSettingsService} from "../../services/application/application-settings.service";
+import {ThemeType} from "../../services/application/models/theme-type.enum";
 
 @Component({
   selector: 'app-user-profile',
@@ -6,20 +8,19 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
-  public isDarkModeActive: boolean = false;
+  public currentTheme: ThemeType = ThemeType.LIGHT;
+  public themeType = ThemeType;
 
   @Output() userProfileShownEvent = new EventEmitter();
 
-  constructor() { }
+  constructor(private settings: ApplicationSettingsService) { }
 
   ngOnInit(): void {
+    this.currentTheme = this.settings.currentTheme;
   }
 
-  public darkModeClicked(event: MouseEvent) {
-    event.stopPropagation();
-    this.isDarkModeActive = !this.isDarkModeActive;
-
-    this.userProfileShownEvent.emit();
+  public onThemeClicked(theme: ThemeType) {
+    this.currentTheme = theme;
+    this.settings.currentTheme = this.currentTheme;
   }
-
 }
