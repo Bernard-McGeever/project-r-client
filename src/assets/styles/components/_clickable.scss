@@ -5,8 +5,8 @@
 // Buttons
 @mixin onHover($primary-color,
                $primary-color-hover,
-               $secondary-color: map.get(a.$dark-theme, "nav-color"),
-               $secondary-color-hover: map.get(a.$dark-theme, "nav-color")) {
+               $secondary-color: var(--nav-color),
+               $secondary-color-hover: var(--nav-color)) {
   color: $primary-color;
   background-color: $secondary-color;
 

@@ -8,32 +8,34 @@ div {
   padding-top: 10px;
   padding-right: 0;
   padding-left: 0;
-  background-color: #1C1C1CFF;
+  background-color: var(--nav-color);
 
   h1 {
-    padding: 0 50px 0 10px;
+    padding: 5px 50px 5px 10px;
     font-family: a.$font-primary;
     letter-spacing: a.$medium-letter-spacing;
     font-size: a.$font-size-medium;
-    color: map.get(a.$dark-theme, "primary-text");
+    color: var(--primary-text);
     border-width: 0 0 0 2px;
-    border-bottom: 2px solid map.get(a.$dark-theme, "secondary-text");
+    border-bottom: 2px solid var(--secondary-text);
   }
 
   ul {
     padding: 0 0 0 0;
 
     li {
-      @include c.onHover(
-          map.get(a.$dark-theme, "primary-text"),
-          map.get(a.$dark-theme, "primary-text-hover")
-      );
-
-      padding: 0 0 0 10px;
+      padding: 10px 0 10px 10px;
       font-family: a.$font-primary;
       letter-spacing: a.$medium-letter-spacing;
       list-style: none;
       font-size: a.$font-size-small;
+
+      color: var(--secondary-text);
+
+      &:hover {
+        cursor: pointer;
+        color: var(--secondary-text-hover);
+      }
     }
   }
 }

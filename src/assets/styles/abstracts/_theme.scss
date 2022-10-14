@@ -1,24 +1,44 @@
 @use "src/assets/styles/abstracts/color" as c;
 
-$dark-theme: (
-  // Background
-  "base-color": c.$base-color-dark,
-  "nav-color": c.$nav-color-dark,
-  "primary-btn-background": c.$primary-btn-background-dark,
-  "primary-btn-background-hover": c.$primary-btn-background-dark-hover,
-  "secondary-btn-background": c.$secondary-btn-background-dark,
-  "secondary-btn-background-hover": c.$secondary-btn-background-dark-hover,
-  // Foreground
-  "primary-btn-foreground": c.$primary-btn-foreground-dark,
-  "primary-btn-foreground-hover": c.$primary-btn-foreground-dark-hover,
-  "secondary-btn-foreground": c.$secondary-btn-foreground-dark,
-  "secondary-btn-foreground-hover": c.$secondary-btn-foreground-dark-hover,
-  // Text
-  "primary-text": c.$primary-text-dark,
-  "primary-text-hover": c.$primary-text-dark-hover,
-  "secondary-text": c.$secondary-text-dark,
-  "secondary-text-hover": c.$secondary-text-dark-hover
-);
+@mixin importTheme() {
+  :host-context( .dark-theme ) {
+    // Background
+    --base-color: #{c.$base-color-dark};
+    --nav-color: #{c.$nav-color-dark};
+    --primary-btn-background: #{c.$primary-btn-background-dark};
+    --primary-btn-background-hover: #{c.$primary-btn-background-dark-hover};
+    --secondary-btn-background: #{c.$secondary-btn-background-dark};
+    --secondary-btn-background-hover: #{c.$secondary-btn-background-dark-hover};
+    // Foreground
+    --primary-btn-foreground: #{c.$primary-btn-foreground-dark};
+    --primary-btn-foreground-hover: #{c.$primary-btn-foreground-dark-hover};
+    --secondary-btn-foreground: #{c.$secondary-btn-foreground-dark};
+    --secondary-btn-foreground-hover: #{c.$secondary-btn-foreground-dark-hover};
+    // Text
+    --primary-text: #{c.$primary-text-dark};
+    --primary-text-hover: #{c.$primary-text-dark-hover};
+    --secondary-text: #{c.$secondary-text-dark};
+    --secondary-text-hover: #{c.$secondary-text-dark-hover};
+  }
 
-$light-theme: ();
+  :host-context( .light-theme ) {
+    // Background
+    --base-color: #{c.$base-color-light};
+    --nav-color: #{c.$nav-color-light};
+    --primary-btn-background: #{c.$primary-btn-background-light};
+    --primary-btn-background-hover: #{c.$primary-btn-background-light-hover};
+    --secondary-btn-background: #{c.$secondary-btn-background-light};
+    --secondary-btn-background-hover: #{c.$secondary-btn-background-light-hover};
+    // Foreground
+    --primary-btn-foreground: #{c.$primary-btn-foreground-light};
+    --primary-btn-foreground-hover: #{c.$primary-btn-foreground-light-hover};
+    --secondary-btn-foreground: #{c.$secondary-btn-foreground-light};
+    --secondary-btn-foreground-hover: #{c.$secondary-btn-foreground-light-hover};
+    // Text
+    --primary-text: #{c.$primary-text-light};
+    --primary-text-hover: #{c.$primary-text-light-hover};
+    --secondary-text: #{c.$secondary-text-light};
+    --secondary-text-hover: #{c.$secondary-text-light-hover};
+  }
+}
 

@@ -4,14 +4,8 @@
 @use "sass:map";
 
 h1 {
-  @include c.onHover(
-      map.get(a.$dark-theme, "primary-text-dark"),
-      map.get(a.$dark-theme, "primary-text-hover")
-  );
-
   float: left;
-
-  color: map.get(a.$dark-theme, "primary-text");
+  color: var(--primary-text);
   font-family: a.$font-primary;
   letter-spacing: a.$wide-letter-spacing;
   text-align: center;
@@ -22,15 +16,14 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   span {
-    color: map.get(a.$dark-theme, "secondary-text");
+    color: var(--secondary-text);
   }
 
   &:hover {
     cursor: pointer;
-    color: map.get(a.$dark-theme, "primary-text-hover");
-
+    color: var(--primary-text-hover);
     span {
-      color: map.get(a.$dark-theme, "secondary-text-hover");
+      color: var(--secondary-text-hover);
     }
   }
 }

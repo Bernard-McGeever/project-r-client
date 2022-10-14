@@ -4,7 +4,7 @@
 @use "sass:map";
 
 nav {
-  background-color: map.get(a.$dark-theme, "nav-color");
+  background-color: var(--nav-color);
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -17,18 +17,17 @@ nav {
     padding: 7px 10px 0 0;
 
     .user-profile-icon {
-      @include c.onHover(
-          map.get(a.$dark-theme, "secondary-btn-background"),
-          map.get(a.$dark-theme, "secondary-btn-background-hover"),
-          map.get(a.$dark-theme, "secondary-btn-foreground"),
-          map.get(a.$dark-theme, "secondary-btn-foreground-hover")
-      );
-
       display: inline-block;
+      color: var(--secondary-btn-background);
       margin: 5px;
 
       transform: scale(1.4);
       vertical-align: middle;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--secondary-btn-background-hover);
+      }
     }
   }
 }

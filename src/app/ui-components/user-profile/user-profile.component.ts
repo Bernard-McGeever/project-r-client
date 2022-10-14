@@ -1,6 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ApplicationSettingsService } from "../../services/application/application-settings.service";
-import { ThemeType } from "../../services/application/models/theme-type.enum";
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ApplicationSettingsService} from "../../services/application/application-settings.service";
+import {ThemeType} from "../../services/application/models/theme-type.enum";
 
 @Component({
   selector: 'app-user-profile',
@@ -13,7 +13,7 @@ export class UserProfileComponent implements OnInit {
 
   @Output() userProfileShownEvent = new EventEmitter();
 
-  constructor(private settings: ApplicationSettingsService) { }
+  constructor(private settings: ApplicationSettingsService) {}
 
   ngOnInit(): void {
     this.currentTheme = this.settings.currentTheme;
