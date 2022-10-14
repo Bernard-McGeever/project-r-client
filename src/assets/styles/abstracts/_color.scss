@@ -1,0 +1,46 @@
+// Colors
+$dark-grey: #313131;
+$darker-grey: #171717;
+$white: #ffffff;
+$darker-white: #d7d7d7;
+$dark-red: #DC143CFF;
+$darker-red: #c21234;
+$light-blue: #6c6cd9;
+$lighter-blue: #9999ec;
+
+// Background
+$base-color-dark: $dark-grey;
+$nav-color-dark: $darker-grey;
+$primary-btn-background-dark: $dark-red;
+$primary-btn-background-dark-hover: $darker-red;
+$secondary-btn-background-dark: $white;
+$secondary-btn-background-dark-hover: $darker-white;
+//
+$base-color-light: $white;
+$nav-color-light: $darker-white;
+$primary-btn-background-light: $light-blue;
+$primary-btn-background-light-hover: $lighter-blue;
+$secondary-btn-background-light: $darker-grey;
+$secondary-btn-background-light-hover: $dark-grey;
+
+// Foreground
+$primary-btn-foreground-dark: $white;
+$primary-btn-foreground-dark-hover: $darker-white;
+$secondary-btn-foreground-dark: $dark-grey;
+$secondary-btn-foreground-dark-hover: $darker-grey;
+//
+$primary-btn-foreground-light: $darker-grey;
+$primary-btn-foreground-light-hover: $dark-grey;
+$secondary-btn-foreground-light: $darker-white;
+$secondary-btn-foreground-light-hover: $white;
+
+// Text
+$primary-text-dark: $white;
+$primary-text-dark-hover: $darker-white;
+$secondary-text-dark: $dark-red;
+$secondary-text-dark-hover: $darker-red;
+//
+$primary-text-light: $darker-grey;
+$primary-text-light-hover: $dark-grey;
+$secondary-text-light: $lighter-blue;
+$secondary-text-light-hover: $lighter-blue;

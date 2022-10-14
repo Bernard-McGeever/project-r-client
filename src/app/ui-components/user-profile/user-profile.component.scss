@@ -1,36 +1,41 @@
+@use "src/assets/styles/abstracts" as a;
+@use "src/assets/styles/components" as c;
+
+@use "sass:map";
+
 div {
   float: right;
   padding-top: 10px;
   padding-right: 0;
   padding-left: 0;
-  background-color: #1C1C1CFF;
+  background-color: var(--nav-color);
 
   h1 {
-    padding: 0 50px 0 10px;
-    font-family: 'Inconsolata', monospace;
-    letter-spacing: 0.2em;
-    font-size: 18px;
-    color: white;
+    padding: 5px 50px 5px 10px;
+    font-family: a.$font-primary;
+    letter-spacing: a.$medium-letter-spacing;
+    font-size: a.$font-size-medium;
+    color: var(--primary-text);
     border-width: 0 0 0 2px;
-    border-bottom: 2px solid crimson;
+    border-bottom: 2px solid var(--secondary-text);
   }
 
   ul {
     padding: 0 0 0 0;
 
     li {
-      padding: 0 0 0 10px;
-      font-family: 'Inconsolata', monospace;
-      letter-spacing: 0.2em;
+      padding: 10px 0 10px 10px;
+      font-family: a.$font-primary;
+      letter-spacing: a.$medium-letter-spacing;
       list-style: none;
-      font-size: 15px;
+      font-size: a.$font-size-small;
 
-      color: white;
-    }
+      color: var(--secondary-text);
 
-    li:hover {
-      color: rgba(255, 255, 255, 0.80);
-      cursor: pointer;
+      &:hover {
+        cursor: pointer;
+        color: var(--secondary-text-hover);
+      }
     }
   }
 }

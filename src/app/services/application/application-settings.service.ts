@@ -14,6 +14,7 @@ export class ApplicationSettingsService {
   }
 
   private subscribeToSettingsChanges() {
+    this.currentTheme;
     window.addEventListener('storage', (event: StorageEvent) => {
       if (event.key === 'theme') {
         this.setTheme();
@@ -31,12 +32,12 @@ export class ApplicationSettingsService {
     }
   }
 
-  public subscribeToTheme(next: () => void): Subscription {
+  public subscribeToTheme(next: (themeType: ThemeType) => void): Subscription {
     return this.themeSubject.subscribe(next);
   }
 
   public get currentTheme(): ThemeType {
-    const themeString = localStorage.getItem('theme');
+    let themeString = localStorage.getItem('theme');
     // @ts-ignore
     const theme = themeString ? ThemeType[localStorage.getItem('theme')] : ThemeType.LIGHT;
 

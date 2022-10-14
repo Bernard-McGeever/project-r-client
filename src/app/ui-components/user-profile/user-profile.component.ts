@@ -13,7 +13,7 @@ export class UserProfileComponent implements OnInit {
 
   @Output() userProfileShownEvent = new EventEmitter();
 
-  constructor(private settings: ApplicationSettingsService) { }
+  constructor(private settings: ApplicationSettingsService) {}
 
   ngOnInit(): void {
     this.currentTheme = this.settings.currentTheme;

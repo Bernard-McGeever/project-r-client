@@ -1,28 +1,29 @@
+@use "src/assets/styles/abstracts" as a;
+@use "src/assets/styles/components" as c;
+
+@use "sass:map";
+
 h1 {
   float: left;
-
-  color: white;
-  font-family: 'Inconsolata', monospace;
-  letter-spacing: 0.2em;
+  color: var(--primary-text);
+  font-family: a.$font-primary;
+  letter-spacing: a.$wide-letter-spacing;
   text-align: center;
-  font-size: 24px;
+  font-size: a.$font-size-large;
 
   padding-left: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-
   span {
-    color: crimson;
+    color: var(--secondary-text);
   }
-}
 
-h1:hover {
-  cursor: pointer;
-
-  color: rgba(255, 255, 255, 0.80);
-
-  span {
-    color: rgba(220, 20, 60, 0.80);
+  &:hover {
+    cursor: pointer;
+    color: var(--primary-text-hover);
+    span {
+      color: var(--secondary-text-hover);
+    }
   }
 }

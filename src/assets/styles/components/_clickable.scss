@@ -1,0 +1,18 @@
+@use "src/assets/styles/abstracts" as a;
+
+@use "sass:map";
+
+// Buttons
+@mixin onHover($primary-color,
+               $primary-color-hover,
+               $secondary-color: var(--nav-color),
+               $secondary-color-hover: var(--nav-color)) {
+  color: $primary-color;
+  background-color: $secondary-color;
+
+  &:hover {
+    cursor: pointer;
+    color: $primary-color-hover;
+    background-color: $secondary-color-hover;
+  }
+}
